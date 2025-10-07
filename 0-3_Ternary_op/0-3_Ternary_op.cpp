@@ -1,34 +1,14 @@
-﻿#include <iostream>
-#include <string>
-using namespace std;
+﻿// 0-3_Ternary_op.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+
+#include <iostream>
 
 int main()
 {
-    // 4
-
-
-    // 3
-    /*float a, b;
-    int x, y;
-    cin >> a; cin >> x; cin >> b; cin >> y;
-    cout << floor((a * x + b * y) / (a + b));*/
-
-
-    // 2
-    /*int n, k, m;
-    cin >> n; cin >> k; cin >> m;
-
-    n--;
-    int pod = n / (k * m);
-    int et = (n - pod * k * m) / m + 1;
-    cout << (pod + 1) << " " << (et);*/
-
-
-    // 1
-    /*int a, b;
-    cin >> a; cin >> b;
-
-    cout << a + b << endl;*/
+    // 1) макс. значение для двух вещ. чисел
+    float a, b;
+    std::cin >> a; std::cin >> b;
+    std::cout << (a > b ? a : b);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

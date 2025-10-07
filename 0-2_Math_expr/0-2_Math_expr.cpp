@@ -1,34 +1,20 @@
-﻿#include <iostream>
-#include <string>
+﻿// 0-2_Math_expr.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+
+#include <iostream>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
+double expression(double x, double y) {
+    return log((y - sqrt(abs(x))) * (x - y / (x + (x * x) / 4)));
+}
+
 int main()
-{
-    // 4
-
-
-    // 3
-    /*float a, b;
-    int x, y;
-    cin >> a; cin >> x; cin >> b; cin >> y;
-    cout << floor((a * x + b * y) / (a + b));*/
-
-
-    // 2
-    /*int n, k, m;
-    cin >> n; cin >> k; cin >> m;
-
-    n--;
-    int pod = n / (k * m);
-    int et = (n - pod * k * m) / m + 1;
-    cout << (pod + 1) << " " << (et);*/
-
-
-    // 1
-    /*int a, b;
-    cin >> a; cin >> b;
-
-    cout << a + b << endl;*/
+{   
+    cout << fixed << setprecision(6) << expression(4., 20.) << endl;
+    cout << fixed << setprecision(6) << expression(3., 15.) << endl;
+    cout << fixed << setprecision(6) << expression(4., 2.);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
