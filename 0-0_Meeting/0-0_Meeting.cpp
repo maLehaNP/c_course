@@ -4,15 +4,11 @@ using namespace std;
 
 int main()
 {
-    // 4
+    // 1
+    /*int a, b;
+    cin >> a; cin >> b;
 
-
-    // 3
-    /*float a, b;
-    int x, y;
-    cin >> a; cin >> x; cin >> b; cin >> y;
-    cout << floor((a * x + b * y) / (a + b));*/
-
+    cout << a + b << endl;*/
 
     // 2
     /*int n, k, m;
@@ -23,12 +19,23 @@ int main()
     int et = (n - pod * k * m) / m + 1;
     cout << (pod + 1) << " " << (et);*/
 
+    // 3
+    /*float a, b;
+    int x, y;
+    cin >> a; cin >> x; cin >> b; cin >> y;
+    cout << floor((a * x + b * y) / (a + b));*/
 
-    // 1
-    /*int a, b;
-    cin >> a; cin >> b;
-
-    cout << a + b << endl;*/
+    // 4
+    /*int m;
+    int n = 2;
+    cin >> m;
+    while (true) {
+        if (n * (n - 1) == 2*m) {
+            cout << n << endl;
+            break;
+        }
+        else n++;
+    }*/
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
