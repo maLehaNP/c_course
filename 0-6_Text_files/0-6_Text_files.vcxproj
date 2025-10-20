@@ -126,7 +126,8 @@
     <ClCompile Include="0-6_Text_files.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="in.txt" />
+    <Text Include="in1.txt" />
+    <Text Include="in2.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
