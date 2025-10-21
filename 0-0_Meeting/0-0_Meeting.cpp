@@ -1,16 +1,18 @@
 ﻿#include <iostream>
 #include <string>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main()
 {
-    // 1
+    // 1. A + B
     /*int a, b;
     cin >> a; cin >> b;
 
     cout << a + b << endl;*/
 
-    // 2
+    // 2. Линейные алгоритмы. Задача 3.2
     /*int n, k, m;
     cin >> n; cin >> k; cin >> m;
 
@@ -19,13 +21,13 @@ int main()
     int et = (n - pod * k * m) / m + 1;
     cout << (pod + 1) << " " << (et);*/
 
-    // 3
+    // 3. Прикладная химия
     /*float a, b;
     int x, y;
     cin >> a; cin >> x; cin >> b; cin >> y;
     cout << floor((a * x + b * y) / (a + b));*/
 
-    // 4
+    // 4. Количество чисел по количеству пар
     /*int m;
     int n = 2;
     cin >> m;
@@ -36,6 +38,38 @@ int main()
         }
         else n++;
     }*/
+
+    // 5. Вычислительная геометрия. Задача 1
+    /*int x1, y1, x2, y2;
+    cin >> x1; cin >> y1;
+    cin >> x2; cin >> y2;
+    cout << fixed << setprecision(4) << sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)) << endl;*/
+
+    // 6. Условный оператор. Задача 3
+    /*string x;
+    cin >> x;
+    if (x[0] == x[1]) {
+        cout << "YES";
+    }
+    else if (x[0] == x[2]) {
+        cout << "YES";
+    }
+    else if (x[1] == x[2]) {
+        cout << "YES";
+    }
+    else cout << "NO";*/
+
+    // 7. Ветвление. Задача 4 (Кирпич)
+    int a, b;
+    int x, y, z;
+    cin >> a; cin >> b;
+    cin >> x; cin >> y; cin >> z;
+    int area = a * b;
+    int side1 = x * y;
+    int side2 = x * z;
+    int side3 = y * z;
+    if (side1 <= area || side2 <= area || side3 <= area) cout << "Yes";
+    else cout << "No";
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
