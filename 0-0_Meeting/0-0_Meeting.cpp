@@ -60,7 +60,7 @@ int main()
     else cout << "NO";*/
 
     // 7. Ветвление. Задача 4 (Кирпич)
-    int a, b;
+    /*int a, b;
     int x, y, z;
     cin >> a; cin >> b;
     cin >> x; cin >> y; cin >> z;
@@ -69,7 +69,28 @@ int main()
     int side2 = x * z;
     int side3 = y * z;
     if (side1 <= area || side2 <= area || side3 <= area) cout << "Yes";
-    else cout << "No";
+    else cout << "No";*/
+
+    // 8. Условный оператор. Задача 18
+    /*Вход
+    3 4 5
+    Выход
+    6.000000*/
+    /*int a, b, c;
+    cin >> a; cin >> b; cin >> c;
+    if (a + b > c && a + c > b && b + c > a) {
+        cout << fixed << setprecision(6) << 0.5 *  << endl;
+    }
+    else cout << -1;*/
+
+    // 9. Вася и работа
+    int n;
+    cin >> n;
+    string n_str = to_string(n);
+    if (n % 3 && n_str.ends_with("3")) cout << 0;
+    else if (n % 3) cout << 1;
+    else if (n_str.ends_with("3")) cout << 1;
+    else cout << 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
