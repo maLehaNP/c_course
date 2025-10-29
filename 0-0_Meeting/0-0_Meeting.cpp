@@ -40,10 +40,10 @@ int main()
     }*/
 
     // 5. Вычислительная геометрия. Задача 1
-    /*int x1, y1, x2, y2;
+    /*double x1, y1, x2, y2;
     cin >> x1; cin >> y1;
     cin >> x2; cin >> y2;
-    cout << fixed << setprecision(4) << sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)) << endl;*/
+    cout << fixed << setprecision(4) << sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));*/
 
     // 6. Условный оператор. Задача 3
     /*string x;
@@ -64,12 +64,31 @@ int main()
     int x, y, z;
     cin >> a; cin >> b;
     cin >> x; cin >> y; cin >> z;
-    int area = a * b;
-    int side1 = x * y;
-    int side2 = x * z;
-    int side3 = y * z;
-    if (side1 <= area || side2 <= area || side3 <= area) cout << "Yes";
+    if ((x <= a && y <= b)
+        || (x <= a && z <= b)
+        || (y <= a && z <= b)
+        || (x <= b && y <= a)
+        || (x <= b && z <= a)
+        || (y <= b && z <= a)) cout << "Yes";
     else cout << "No";
+
+    // 8. Условный оператор. Задача 18
+    /*double a, b, c;
+    cin >> a; cin >> b; cin >> c;
+    if (a + b > c && a + c > b && b + c > a) {
+        double p = (a + b + c) / 2;
+        cout << fixed << sqrt(p * (p - a) * (p - b) * (p - c));
+    }
+    else cout << -1;*/
+
+    // 9. Вася и работа
+    /*int n;
+    cin >> n;
+    string n_str = to_string(n);
+    if (n % 3 == 0 && n_str.rfind('3') + 1 == n_str.size()) cout << 0;
+    else if (n % 3 == 0) cout << 1;
+    else if (n_str.rfind('3') + 1 == n_str.size()) cout << 1;
+    else cout << 0;*/
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
