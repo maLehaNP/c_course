@@ -21,10 +21,10 @@ int main()
     std::cout << sec_max;*/
 
     // 2. Числа Фибоначчи из отрезка
-    /*int a, b;
+    int a, b;
     std::cin >> a; std::cin >> b;
     int fib = 1;
-    int x0 = 0;
+    int x0 = 1;
     int x1 = 1;
     while (fib < b) {
         if (fib >= a) std::cout << fib << ' ';
@@ -32,7 +32,7 @@ int main()
         x0 = x1;
         x1 = fib;
     }
-    if (fib == b) std::cout << fib;*/
+    if (fib == b) std::cout << fib;
 
     // 3. Сумма на степенях двоек
     /*int n;
