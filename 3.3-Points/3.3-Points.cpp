@@ -25,8 +25,14 @@ int main()
     cout << count_if(points.begin(), points.end(), [point](pair<int, int> p) { return (p.first < point.first && p.second < point.second); }) << endl;
 
     // â)
-    int R = 15;
-    auto pred = [R](pair<int, int> p) { return sqrt(p.first * p.first + p.second * p.second) >= R; };
+    //int R = 15;
+    auto pred = [](pair<int, int> p) { return sqrt(p.first * p.first + p.second * p.second) >= 15; };
     auto p = ranges::find_last_if(points, pred);
-    cout << p.begin()->first << ' ' << p.begin()->second << endl;
+    //cout << p.begin()->first << ' ' << p.begin()->second << endl;
+
+    // à)
+    const auto End = remove_if(points.begin(), points.end(), [](pair<int, int> p) { return p.first < 0; });
+    for (pair<int, int> p : points) {
+        cout << "{" << p.first << ", " << p.second << "} ";
+    }
 }
