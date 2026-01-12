@@ -18,21 +18,36 @@ int main()
      * г) расположить в порядке возрастания суммы координат, сохраняя порядок точек с одинаковой суммой
      */
 
-    vector<pair<int, int>> points = { {1, 1}, {3, 3}, {-1, 1}, {-2, -1} };
+    vector<pair<int, int>> points = { {1, 1}, {4, 3}, { 3, 4 }, { 3, 3 }, {-1, 1}, {-2, -1} };
 
     // б)
     pair<int, int> point(2, 2);
-    cout << count_if(points.begin(), points.end(), [point](pair<int, int> p) { return (p.first < point.first && p.second < point.second); }) << endl;
+    cout << "b) " << count_if(points.begin(), points.end(), [point](pair<int, int> p) { return (p.first < point.first && p.second < point.second); }) << endl;
+
 
     // в)
-    //int R = 15;
-    auto pred = [](pair<int, int> p) { return sqrt(p.first * p.first + p.second * p.second) >= 15; };
-    auto p = ranges::find_last_if(points, pred);
-    //cout << p.begin()->first << ' ' << p.begin()->second << endl;
+    int R = 4;
+    auto pred = [R](pair<int, int> p) { return sqrt(p.first * p.first + p.second * p.second) >= R; };
+    //auto pred = [](pair<int, int> p) { return p.first == 3; };
+    auto subrange = ranges::find_last_if(points, pred);
+    cout << "c) ";
+    /*for (pair<int, int> p : subrange)  // С хвостом
+        cout << "{" << p.first << ", " << p.second << "} ";*/
+    cout << "{" << subrange[0].first << ", " << subrange[0].second << "}\n";
+
+
+    // г)
+    stable_sort(points.begin(), points.end(), [](pair<int, int> a, pair<int, int> b) { return a.first + a.second < b.first + b.second; });
+    cout << "d) ";
+    for (pair<int, int> p : points)
+        cout << "{" << p.first << ", " << p.second << "} ";
+    cout << endl;
+
 
     // а)
-    const auto End = remove_if(points.begin(), points.end(), [](pair<int, int> p) { return p.first < 0; });
-    for (pair<int, int> p : points) {
+    const auto end = remove_if(points.begin(), points.end(), [](pair<int, int> p) { return p.first < 0; });
+    points.erase(end, points.end());
+    cout << "a) ";
+    for (pair<int, int> p : points)
         cout << "{" << p.first << ", " << p.second << "} ";
-    }
 }
